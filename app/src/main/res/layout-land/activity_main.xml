@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/isotipo"
+        android:src="@drawable/ic_action_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto"
+        android:text="Inicio Sesion"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/isotipo" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/input1"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:hint="Name"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/texto"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/input2"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/input1"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button"
+        android:id="@+id/boton1"
+        android:text="Login"
+        android:layout_marginTop="16dp"
+        android:layout_margin="2dp"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/input2"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton2"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Register"
+        android:layout_marginTop="16dp"
+        android:layout_margin="2dp"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/boton1"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
